@@ -65,11 +65,13 @@ app.get("/user/:name", (req, res) => {
     });
 });
 
-//
+//middleware
 app.use (( req, res, next) => {
     console.log(`${req.method} ${req.url}`);
     next();
 });
+
+app.use(express.static("public"));
 
 // Start server
 
