@@ -15,9 +15,8 @@ html
     nav
 
       ul
-
+        li: a(href="/") Home
         li: a(href="/about") About
-
         li: a(href="/services") Services
 
 // form submitting dataa
@@ -26,6 +25,9 @@ form(action="/submit" method="POST")
   input(type="text" name ="username")
   button(type="submit") Submit 
 
-//image of
+// Image + download image of pikachu //
 
-img(src="/pika.PNG") 
+a(href="/download")
+      button Download Image
+
+

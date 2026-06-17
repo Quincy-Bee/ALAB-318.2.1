@@ -73,6 +73,15 @@ app.use (( req, res, next) => {
 
 app.use(express.static("public"));
 
+//
+
+//download route
+
+app.get("/download", (req, res)=> {
+  res.download(path.join(__dirname, "public", "pika.PNG"));
+});
+
+
 // Start server
 
 app.listen(port, () => {
