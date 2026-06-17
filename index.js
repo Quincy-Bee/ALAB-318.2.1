@@ -41,7 +41,7 @@ app.get("/", (req, res) => {
 //creating route for about
 
 app.get("/about", (req, res) => {
-  res.render("about");
+    res.render("about");
 });
 
 // creating route for services
@@ -49,6 +49,21 @@ app.get("/services", (req, res) => {
     res.render("services");
 });
 
+//Simple sucess response
+app.use(express.urlencoded({ extended: true }));
+
+app.post("/submit", (req, res) => {
+    console.log(req.body);
+    res.send("sucess");
+});
+
+//route for username
+
+app.get("/user/:name", (req, res) => {
+    res.render("index", {
+        title: req.params.name
+    });
+});
 
 // Start server
 
