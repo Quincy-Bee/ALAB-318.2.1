@@ -38,8 +38,15 @@ app.get("/", (req, res) => {
 
 });
 
+//creating route for about
+
 app.get("/about", (req, res) => {
   res.render("about");
+});
+
+// creating route for services
+app.get("/services", (req, res) => {
+    res.render("services");
 });
 
 
