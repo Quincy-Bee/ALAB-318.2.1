@@ -65,6 +65,12 @@ app.get("/user/:name", (req, res) => {
     });
 });
 
+//
+app.use (( req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+
 // Start server
 
 app.listen(port, () => {
