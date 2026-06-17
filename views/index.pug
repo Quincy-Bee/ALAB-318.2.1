@@ -8,7 +8,7 @@ html
 
   body
 
-    h1 Home
+    h1 Home Page
 
     p Welcome to my Express + Pug application
 
@@ -19,3 +19,9 @@ html
         li: a(href="/about") About
 
         li: a(href="/services") Services
+
+// form submitting dataa
+
+form(action="/submit" method="POST")
+  input(type="text" name ="username")
+  button(type="submit") Submit 
