@@ -58,6 +58,10 @@ app.get("/api", (req, res) => {
     res.send("API is working");
 });
 
+//data for user and posts 
+let users = [];
+let posts = [];
+
 //route for username
 
 app.get("/user/:name", (req, res) => {
