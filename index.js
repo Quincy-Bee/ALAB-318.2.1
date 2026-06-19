@@ -1,13 +1,8 @@
 import express from "express";
-
 import path from "path";
-
 import { fileURLToPath } from "url";
 
-
-
 const app = express();
-
 const port = 3000;
 
 
@@ -85,7 +80,5 @@ app.get("/download", (req, res)=> {
 // Start server
 
 app.listen(port, () => {
-
     console.log(`Listening on port: ${port}`);
-
 });
