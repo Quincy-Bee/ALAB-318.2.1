@@ -53,6 +53,10 @@ app.get("/services", (req, res) => {
     res.render("services");
 });
 
+//creating route for api
+app.get("/api", (req, res) => {
+    res.send("API is working");
+});
 
 //route for username
 
