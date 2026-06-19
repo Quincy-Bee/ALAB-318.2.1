@@ -42,7 +42,6 @@ app.get("/", (req, res) => {
     });
 
 });
-
 //creating route for about
 
 app.get("/about", (req, res) => {
