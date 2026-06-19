@@ -61,6 +61,45 @@ app.get("/api", (req, res) => {
 //data for user and posts 
 let users = [];
 let posts = [];
+let comments = [];
+
+//POSTS
+
+app.get("/api/posts", (req, res) => {
+    res.json(posts);
+});
+
+app.post("/api/posts", (req, res) => {
+    const newPost = req.body;
+    posts.push(newPost);
+    res.json(newPost);
+});
+
+app.get("/api/posts/:id", (req, res) => {
+    const post = posts.find(p => p.id == req.params.id);
+    res.json(post);
+});
+
+//user routes
+app.get("/api/users", (req, res) => {
+    res.json(users);
+});
+
+
+app.post("/api/users", (req, res) => {
+    const newUser = req.body;
+    users.push(newUser);
+    res.json(newUser);
+});
+//ID
+app.get("/api/users/:id", (req, res) => {
+    const user = users.find(u => u.id == req.params.id);
+    res.json(user);
+});
+//comments
+app.get("/comments", (req, res) => {
+    res.json(comments);
+});
 
 //route for username
 
@@ -73,7 +112,6 @@ app.get("/user/:name", (req, res) => {
 
 app.use(express.static("public"));
 
-//
 
 //download Pikachu route
 
