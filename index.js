@@ -49,12 +49,12 @@ app.get("/services", (req, res) => {
     res.render("services");
 });
 
-//Simple sucess response
+//Simple success response
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/submit", (req, res) => {
     console.log(req.body);
-    res.send("sucess");
+    res.send("success");
 });
 
 //route for username
@@ -75,7 +75,7 @@ app.use(express.static("public"));
 
 //
 
-//download route
+//download Pikachu route
 
 app.get("/download", (req, res)=> {
   res.download(path.join(__dirname, "public", "pika.PNG"));
